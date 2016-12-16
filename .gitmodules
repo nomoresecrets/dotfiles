@@ -34,3 +34,6 @@
 [submodule "_vim/bundle/vim-gitgutter"]
 	path = _vim/bundle/vim-gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
+[submodule "_vim/bundle/vim-snippets"]
+	path = _vim/bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
