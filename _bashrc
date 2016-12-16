@@ -57,6 +57,13 @@ function fawk {
   eval $cmd
 }
 
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+
+# Source git-prompt if available
+if [ -f ~/.git-prompt.sh ]; then
+  . ~/.git-prompt.sh
+fi
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
