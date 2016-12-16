@@ -76,6 +76,8 @@ set cursorline      " highlight the line containing the cursor
 set backspace=2     " Allow backspacing over autoindent, EOL, and BOL
 set confirm         " raise a dialog because of unsaved changes
 set report=0      " always display changed line count
+set noerrorbells    " don't bell
+set novisualbell t_vb=
 
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
