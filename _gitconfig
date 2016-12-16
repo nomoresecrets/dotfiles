@@ -1,0 +1,18 @@
+[user]
+  name = Denny Gebel
+  email = nomoresecrets@gmail.com
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+
+[core]
+  editor = vim
+
+[alias]
+  st = status
+  co = checkout
+  ci = commit
+  br = branch
+  sm = submodule
