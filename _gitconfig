@@ -13,7 +13,8 @@
 [alias]
   st = status
   co = checkout
-  ci = commit
+  ci = commit -m
+  ca = commit -am
   br = branch
   sm = submodule
   aa = add --all
