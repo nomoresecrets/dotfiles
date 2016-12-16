@@ -27,8 +27,12 @@ PROMPT_COMMAND="history -a"
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# User specific aliases and functions
+# Change behavior of __git_ps1
+export GIT_PS1_SHOWDIRTYSTATE=yes
+export GIT_PS1_SHOWSTASHSTATE=yes
+export GIT_PS1_SHOWUNTRACKEDFILES=yes
 
+# User specific aliases and functions
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
