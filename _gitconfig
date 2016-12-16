@@ -16,5 +16,7 @@
   ci = commit
   br = branch
   sm = submodule
+  aa = add --all
+
 [push]
-	default = simple
+  default = simple
