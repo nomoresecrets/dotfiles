@@ -1,3 +1,33 @@
 [submodule "_vim/bundle/vim-pathogen"]
 	path = _vim/bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen
+[submodule "_vim/bundle/vim-fugitive"]
+	path = _vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "_vim/bundle/vim-sorround"]
+	path = _vim/bundle/vim-sorround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "_vim/bundle/vim-git"]
+	path = _vim/bundle/vim-git
+	url = git://github.com/tpope/vim-git.git
+[submodule "_vim/bundle/vim-gundo"]
+	path = _vim/bundle/vim-gundo
+	url = git://github.com/sjl/gundo.vim.git
+[submodule "_vim/bundle/vim-tasklist"]
+	path = _vim/bundle/vim-tasklist
+	url = git://github.com/vim-scripts/TaskList.vim.git
+[submodule "_vim/bundle/vim-nerdtree"]
+	path = _vim/bundle/vim-nerdtree
+	url = git://github.com/vim-scripts/The-NERD-tree.git
+[submodule "_vim/bundle/vim-colors-solarized"]
+	path = _vim/bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "_vim/bundle/syntastic"]
+	path = _vim/bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
+[submodule "_vim/bundle/vim-puppet"]
+	path = _vim/bundle/vim-puppet
+	url = https://github.com/rodjek/vim-puppet.git
+[submodule "_vim/bundle/vim-tabular"]
+	path = _vim/bundle/vim-tabular
+	url = https://github.com/godlygeek/tabular.git
