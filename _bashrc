@@ -7,11 +7,55 @@ else
         export TERM='xterm'
 fi
 
+# don't put duplicate lines in the history. See bash(1) for more options
+# # ... or force ignoredups and ignorespace
+HISTCONTROL=ignoredups:ignorespace
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# Set HISTSIZE and HISTFILESIZE to an empty value as we append and love our history :)
+# unset isn't working. It will be reset to 500 everytime!
+export HISTSIZE=
+export HISTFILESIZE=
+
+# Save history immediatly after running command
+# With "history -n" it's possible to read all new lines since last read
+PROMPT_COMMAND="history -a"
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
 # User specific aliases and functions
 
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias tailf='tail -F'
+alias ll='ls -al'
+alias df='df -h'
+alias ..='cd ..'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Set to 'C' to make ls sort dotfiles
+export LC_COLLATE=C
+
+# Set the right editor
+vim="$(which vim)"
+if [ -x "${vim}" ]; then
+  export EDITOR="${vim}"
+  alias vi=$EDITOR
+fi
+
+function fawk {
+  first="awk '{print "
+  last="}'"
+  cmd="${first}\$${1}${last}"
+  eval $cmd
+}
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then

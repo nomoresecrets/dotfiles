@@ -40,6 +40,7 @@ set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
 " Color settings
 set t_Co=256            " Enable 256 colors
 set background=dark	" dark background in use
+let g:solarized_termcolors=256
 colorscheme solarized   " use colorscheme
 
 " Line numbers
@@ -89,4 +90,3 @@ map <leader>t <Plug>TaskList    " toggle tasklist
 
 " F3 to toggle numbers
 nnoremap <F3> :set invnumber<CR>
-

@@ -31,3 +31,6 @@
 [submodule "_vim/bundle/vim-tabular"]
 	path = _vim/bundle/vim-tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "_vim/bundle/vim-gitgutter"]
+	path = _vim/bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
