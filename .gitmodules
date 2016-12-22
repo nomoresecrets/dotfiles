@@ -37,3 +37,6 @@
 [submodule "_vim/bundle/vim-snippets"]
 	path = _vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "_bash-git-prompt"]
+	path = _bash-git-prompt
+	url = https://github.com/magicmonty/bash-git-prompt.git

@@ -28,9 +28,9 @@ PROMPT_COMMAND="history -a"
 shopt -s checkwinsize
 
 # Change behavior of __git_ps1
-export GIT_PS1_SHOWDIRTYSTATE=yes
-export GIT_PS1_SHOWSTASHSTATE=yes
-export GIT_PS1_SHOWUNTRACKEDFILES=yes
+#export GIT_PS1_SHOWDIRTYSTATE=yes
+#export GIT_PS1_SHOWSTASHSTATE=yes
+#export GIT_PS1_SHOWUNTRACKEDFILES=yes
 
 
 # Enable color prompt
@@ -75,9 +75,9 @@ function fawk {
 
 
 # Source git-prompt if available
-if [ -f ~/.git-prompt.sh ]; then
-  . ~/.git-prompt.sh
-fi
+#if [ -f ~/.git-prompt.sh ]; then
+#  . ~/.git-prompt.sh
+#fi
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
