@@ -40,6 +40,8 @@ set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
 " Color settings
 set t_Co=256            " Enable 256 colors
 set background=dark	" dark background in use
+
+" some fix for putty
 let g:solarized_termcolors=256
 colorscheme solarized   " use colorscheme
 
