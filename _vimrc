@@ -34,6 +34,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" configure airline theme
+let g:airline_theme='solarized'
+let g:airline_powerline_fonts = 0
+
 " displays tabs with :set list & displays when a line runs off-screen
 set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
 
