@@ -47,7 +47,7 @@ set background=dark	" dark background in use
 
 " some fix for putty
 let g:solarized_termcolors=256
-colorscheme solarized   " use colorscheme
+colorscheme solarized
 
 " Line numbers
 set number		      " display line numbers
