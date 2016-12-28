@@ -89,6 +89,7 @@ set cursorline      " highlight the line containing the cursor
 set backspace=2     " Allow backspacing over autoindent, EOL, and BOL
 set confirm         " raise a dialog because of unsaved changes
 set report=0        " always display changed line count
+set scrolloff=3
 set noerrorbells    " don't bell
 set visualbell t_vb=
 
@@ -104,8 +105,14 @@ endfunc
 " automatic
 autocmd InsertEnter * :set norelativenumber
 
+" Get off my lawn
+nnoremap <Left> :echoe "please use h"<CR>
+nnoremap <Right> :echoe "please use l"<CR>
+nnoremap <Up> :echoe "please use k"<CR>
+nnoremap <Down> :echoe "please use j"<CR>
+
 " Remove trailing whitespace on <leader>S
-nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>S :%s/\s\+$//<CR>:let @/=''<CR>
 
 " F3 to toggle numbers
 nnoremap <F3> :call NumberToggle()<CR>
@@ -115,7 +122,7 @@ map <F11> :set invpaste<CR>
 set pastetoggle=<F11>
 
 " some other keymapping
-map <leader>n :NERDTreeToggle<CR>      " Open NERDTree
+map <leader>n :NERDTreeTabsToggle<CR>  " Open NERDTree
 map <leader>g :GundoToggle<CR>         " Open Gundo window
 map <leader>t <Plug>TaskList           " toggle tasklist
 

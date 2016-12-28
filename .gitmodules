@@ -61,3 +61,6 @@
 [submodule "_vim/bundle/vim-ultisnips"]
 	path = _vim/bundle/vim-ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "_vim/bundle/vim-nerdtree-tabs"]
+	path = _vim/bundle/vim-nerdtree-tabs
+	url = https://github.com/jistr/vim-nerdtree-tabs.git
