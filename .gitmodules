@@ -46,3 +46,12 @@
 [submodule "_vim/bundle/vim-airline-themes"]
 	path = _vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "_vim/bundle/vim-tlib"]
+	path = _vim/bundle/vim-tlib
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "_vim/bundle/vim-addon-mw-utils"]
+	path = _vim/bundle/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "_vim/bundle/vim-snipmate"]
+	path = _vim/bundle/vim-snipmate
+	url = https://github.com/garbas/vim-snipmate.git
