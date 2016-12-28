@@ -36,7 +36,7 @@ let g:syntastic_check_on_wq = 0
 
 " configure airline theme
 let g:airline_theme='solarized'
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
 
 " displays tabs with :set list & displays when a line runs off-screen
 set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>

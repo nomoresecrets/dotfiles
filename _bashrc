@@ -59,6 +59,10 @@ alias egrep='egrep --color=auto'
 # Set to 'C' to make ls sort dotfiles
 export LC_COLLATE=C
 
+# Set to UTF-8 and english locale
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
 # Set the right editor
 vim="$(which vim)"
 if [ -x "${vim}" ]; then
