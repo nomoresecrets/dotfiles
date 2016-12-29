@@ -58,3 +58,6 @@
 [submodule "_vim/bundle/vim-ps1"]
 	path = _vim/bundle/vim-ps1
 	url = https://github.com/PProvost/vim-ps1.git
+[submodule "_vim/bundle/vim-ultisnips"]
+	path = _vim/bundle/vim-ultisnips
+	url = https://github.com/SirVer/ultisnips.git
