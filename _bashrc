@@ -27,12 +27,6 @@ PROMPT_COMMAND="history -a"
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# Change behavior of __git_ps1
-#export GIT_PS1_SHOWDIRTYSTATE=yes
-#export GIT_PS1_SHOWSTASHSTATE=yes
-#export GIT_PS1_SHOWUNTRACKEDFILES=yes
-
-
 # Enable color prompt
 if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
   # We have color support; assume it's compliant with Ecma-48
