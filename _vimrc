@@ -85,11 +85,23 @@ set report=0        " always display changed line count
 set noerrorbells    " don't bell
 set visualbell t_vb=
 
+" functions
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set norelativenumber
+  else
+    set relativenumber
+  endif
+endfunc
+
+" automatic
+autocmd InsertEnter * :set norelativenumber
+
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>S :%s/\s\+$//<cr>:let @/=''<CR>
 
 " F3 to toggle numbers
-nnoremap <F3> :set invnumber<CR>
+nnoremap <F3> :call NumberToggle()<CR>
 
 " F11 to toggle paste mode
 map <F11> :set invpaste<CR>
