@@ -55,7 +55,7 @@ alias vi='vim'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias mkdir='mkdir-p'
+alias mkdir='mkdir -p'
 
 # Set to 'C' to make ls sort dotfiles
 export LC_COLLATE=C
