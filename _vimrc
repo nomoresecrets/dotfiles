@@ -4,8 +4,8 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 "  =========
 "  Shortcuts
 "  =========
-let mapleader=","		" change leader to comma instead of back-slash
-set nocompatible		"  Disable vi compatible mode
+let mapleader=","   " change leader to comma instead of back-slash
+set nocompatible    "  Disable vi compatible mode
 
 " ================================
 " Load plugins managed by Pathogen
@@ -45,8 +45,9 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetsDir = "~/dotfiles/_vim/bundle/vim-snippets/UltiSnips"
 
-" displays tabs with :set list & displays when a line runs off-screen
-set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
+" displays tabs and trailing whitespaces with :set list
+set listchars=tab:>-,trail:·,precedes:<,extends:>
+set list
 
 " Color settings
 set t_Co=256        " Enable 256 colors
@@ -57,19 +58,19 @@ let g:solarized_termcolors=256
 colorscheme solarized
 
 " Line numbers
-set number		      " display line numbers
-set numberwidth=1	  " use only one column when possible
+set number          " display line numbers
+set numberwidth=1   " use only one column when possible
 
 " Search
-set incsearch		    " do incremental search
-set hlsearch		    " highlight search value
-set wrapscan		    " wrap around to the beginning of file on search if end is reached
-set ignorecase		  " case-insensitive search
-set smartcase		    " if a pattern contains an uppercase letter, it is case sensitive
+set incsearch       " do incremental search
+set hlsearch        " highlight search value
+set wrapscan        " wrap around to the beginning of file on search if end is reached
+set ignorecase      " case-insensitive search
+set smartcase       " if a pattern contains an uppercase letter, it is case sensitive
 
 " Indentation
-set autoindent		  " always enable autoindenting
-set smartindent		  " use smart indent if there is no indent file
+set autoindent      " always enable autoindenting
+set smartindent     " use smart indent if there is no indent file
 
 " Misc
 set title		        " show title in console title bar
@@ -110,6 +111,13 @@ nnoremap <Left> :echoe "please use h"<CR>
 nnoremap <Right> :echoe "please use l"<CR>
 nnoremap <Up> :echoe "please use k"<CR>
 nnoremap <Down> :echoe "please use j"<CR>
+
+" key mapping in VisualBlock mode for moving blocks around
+vmap <unique> <up>    <Plug>SchleppUp
+vmap <unique> <down>  <Plug>SchleppDown
+vmap <unique> <left>  <Plug>SchleppLeft
+vmap <unique> <right> <Plug>SchleppRight
+vmap <unique> D       <Plug>SchleppDup
 
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>S :%s/\s\+$//<CR>:let @/=''<CR>
