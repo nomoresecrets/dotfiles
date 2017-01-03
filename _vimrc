@@ -58,6 +58,7 @@ let g:solarized_termcolors=256
 colorscheme solarized
 
 " Line numbers
+set relativenumber
 set number          " display line numbers
 set numberwidth=1   " use only one column when possible
 
