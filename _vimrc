@@ -4,8 +4,8 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 "  =========
 "  Shortcuts
 "  =========
-let mapleader=","   " change leader to comma instead of back-slash
-set nocompatible    "  Disable vi compatible mode
+let mapleader=","                 " change leader to comma instead of back-slash
+set nocompatible                  " disable vi compatible mode
 
 " ================================
 " Load plugins managed by Pathogen
@@ -39,7 +39,7 @@ let g:airline_theme='simple'
 let g:airline_powerline_fonts = 1
 
 " NERDTree Settings
-" let NERDTreeMapOpenInTab='<ENTER>'
+let NERDTreeShowHidden=1
 
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
@@ -49,53 +49,54 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetsDir = "~/dotfiles/_vim/bundle/vim-snippets/UltiSnips"
 
 " displays tabs and trailing whitespaces with :set list
-set listchars=tab:>-,trail:·,precedes:<,extends:>
+set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set list
+set showbreak=↪
 
 " Color settings
-set t_Co=256        " Enable 256 colors
-set background=dark	" dark background in use
+set t_Co=256                      " Enable 256 colors
+set background=dark               " dark background in use
 
 " some fix for putty
 let g:solarized_termcolors=256
 colorscheme solarized
 
 " Line numbers
-set relativenumber
-set number          " display line numbers
-set numberwidth=1   " use only one column when possible
+set relativenumber                " display relativenumer
+set number                        " display line numbers
+set numberwidth=1                 " use only one column when possible
 
 " Search
-set incsearch       " do incremental search
-set hlsearch        " highlight search value
-set wrapscan        " wrap around to the beginning of file on search if end is reached
-set ignorecase      " case-insensitive search
-set smartcase       " if a pattern contains an uppercase letter, it is case sensitive
+set incsearch                     " do incremental search
+set hlsearch                      " highlight search value
+set wrapscan                      " wrap around to the beginning of file on search if end is reached
+set ignorecase                    " case-insensitive search
+set smartcase                     " if a pattern contains an uppercase letter, it is case sensitive
 
 " Indentation
-set autoindent      " always enable autoindenting
-set smartindent     " use smart indent if there is no indent file
+set autoindent                    " always enable autoindenting
+set smartindent                   " use smart indent if there is no indent file
 
 " Misc
-set title		        " show title in console title bar
-set showmatch		    " show matching brackets
-set matchpairs+=<:>,":"	" comma-separated list of characters that form pairs
-set wildmenu		    " menu completion on <TAB> in command mode
-set wildmode=list:longest,full		" cycle between all matches
-set ruler		        " display cursor position
-set tabstop=2		    " <TAB> inserts four spaces
-set shiftwidth=2	  " indent level is 4 spaces wide
-set softtabstop=2	  " <BS> over an autoindent deletes both spaces
-set expandtab		    " use spaces for autoindent/tab
-set smarttab		    " Handle tabs more intelligently
-set laststatus=2    " always show statusline
+set title                         " show title in console title bar
+set showmatch                     " show matching brackets
+set matchpairs+=<:>,":"           " comma-separated list of characters that form pairs
+set wildmenu                      " menu completion on <TAB> in command mode
+set wildmode=list:longest,full    " cycle between all matches
+set ruler                         " display cursor position
+set tabstop=2                     " <TAB> inserts two spaces
+set shiftwidth=2                  " indent level is 2 spaces wide
+set softtabstop=2                 " <BS> over an autoindent deletes both spaces
+set expandtab                     " use spaces for autoindent/tab
+set smarttab                      " Handle tabs more intelligently
+set laststatus=2                  " always show statusline
 set statusline=[%l,%v\ %p%%]\ %F%m%r%h%w\ %=%03.b,0x%B\ %{fugitive#statusline()}\ [%{&ff}]\ %y\ [len:%L]
-set cursorline      " highlight the line containing the cursor
-set backspace=2     " Allow backspacing over autoindent, EOL, and BOL
-set confirm         " raise a dialog because of unsaved changes
-set report=0        " always display changed line count
-set scrolloff=3
-set noerrorbells    " don't bell
+set cursorline                    " highlight the line containing the cursor
+set backspace=2                   " Allow backspacing over autoindent, EOL, and BOL
+set confirm                       " raise a dialog because of unsaved changes
+set report=0                      " always display changed line count
+set scrolloff=5                   " scroll 5 lines ahead
+set noerrorbells                  " don't bell
 set visualbell t_vb=
 
 " functions
@@ -107,8 +108,9 @@ function! NumberToggle()
   endif
 endfunc
 
-" automatic remove relative numbering in INSERT mode
+" automatic toggle relative numbering in INSERT mode
 autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
 
 " always open files in new tab
 
@@ -125,8 +127,12 @@ vmap <unique> <left>  <Plug>SchleppLeft
 vmap <unique> <right> <Plug>SchleppRight
 vmap <unique> D       <Plug>SchleppDup
 
+" set <leader> shortcuts
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>S :%s/\s\+$//<CR>:let @/=''<CR>
+" shortcut to save
+nmap <leader>, :w<cr>
+nmap <leader>gs :Gstatus<cr>
 
 " easier split navigation
 nnoremap <C-J> <C-W><C-J>
