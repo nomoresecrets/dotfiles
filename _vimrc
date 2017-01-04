@@ -38,6 +38,9 @@ let g:syntastic_check_on_wq = 0
 let g:airline_theme='simple'
 let g:airline_powerline_fonts = 1
 
+" NERDTree Settings
+" let NERDTreeMapOpenInTab='<ENTER>'
+
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -104,8 +107,10 @@ function! NumberToggle()
   endif
 endfunc
 
-" automatic
+" automatic remove relative numbering in INSERT mode
 autocmd InsertEnter * :set norelativenumber
+
+" always open files in new tab
 
 " Get off my lawn
 nnoremap <Left> :echoe "please use h"<CR>
@@ -122,6 +127,20 @@ vmap <unique> D       <Plug>SchleppDup
 
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>S :%s/\s\+$//<CR>:let @/=''<CR>
+
+" easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" easier tab navigation
+nnoremap <C-S-tab> :tabprevious<CR>
+nnoremap <C-tab>   :tabnext<CR>
+nnoremap <C-t>     :tabnew<CR>
+inoremap <C-S-tab> <Esc>:tabprevious<CR>
+inoremap <C-tab>   <Esc>:tabnext<CR>
+inoremap <C-t>     <Esc>:tabnew<CR>
 
 " F3 to toggle numbers
 nnoremap <F3> :call NumberToggle()<CR>
