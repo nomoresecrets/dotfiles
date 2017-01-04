@@ -40,9 +40,6 @@
 [submodule "_bash-git-prompt"]
 	path = _bash-git-prompt
 	url = https://github.com/magicmonty/bash-git-prompt.git
-[submodule "_vim/bundle/vim-airline"]
-	path = _vim/bundle/vim-airline
-	url = https://github.com/vim-airline/vim-airline
 [submodule "_vim/bundle/vim-airline-themes"]
 	path = _vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
