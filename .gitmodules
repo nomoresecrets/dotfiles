@@ -64,3 +64,6 @@
 [submodule "_vim/bundle/vim-schlepp"]
 	path = _vim/bundle/vim-schlepp
 	url = https://github.com/zirrostig/vim-schlepp.git
+[submodule "_vim/bundle/vim-airline"]
+	path = _vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
