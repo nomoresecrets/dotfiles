@@ -51,6 +51,10 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias mkdir='mkdir -p'
+alias ta='tmux attach'
+alias tls='tmux ls'
+alias tat='tmux attach -t'
+alias tns='tmux new-session -s'
 
 # Set to 'C' to make ls sort dotfiles
 export LC_COLLATE=C
