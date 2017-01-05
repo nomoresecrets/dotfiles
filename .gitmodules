@@ -67,3 +67,15 @@
 [submodule "_vim/bundle/vim-airline"]
 	path = _vim/bundle/vim-airline
 	url = https://github.com/vim-airline/vim-airline.git
+[submodule "_vim/bundle/vim-repeat"]
+	path = _vim/bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "_vim/bundle/vim-speeddating"]
+	path = _vim/bundle/vim-speeddating
+	url = https://github.com/tpope/vim-speeddating.git
+[submodule "_vim/bundle/vim-commentary"]
+	path = _vim/bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "_vim/bundle/vim-sort-motion"]
+	path = _vim/bundle/vim-sort-motion
+	url = https://github.com/christoomey/vim-sort-motion.git
