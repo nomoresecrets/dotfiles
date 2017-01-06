@@ -49,7 +49,8 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetsDir = "~/dotfiles/_vim/bundle/vim-snippets/UltiSnips"
 
 " displays tabs and trailing whitespaces with :set list
-set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+"set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+set listchars=tab:→\ ,trail:⋅,extends:❯,precedes:❮
 set list
 set showbreak=↪
 
