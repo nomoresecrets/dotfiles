@@ -77,7 +77,7 @@ function fawk {
   last="}'"
   cmd="${first}\$${1}${last}"
   eval $cmd
-}   
+}
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
