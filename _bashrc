@@ -40,23 +40,22 @@ else
 fi
 
 # User specific aliases and functions
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
-alias tailf='tail -F'
-alias ll='ls -al'
-alias df='df -h'
 alias ..='cd ..'
+alias cp='cp -i'
+alias df='df -h'
+alias grep='grep --color=auto'
+alias ll='ls -al'
+alias mkdir='mkdir -p'
+alias mv='mv -i'
+alias pp='cd /etc/puppetlabs/code'
+alias rm='rm -i'
+alias ta='tmux attach'
+alias tailf='tail -F'
+alias tat='tmux attach -t'
+alias tls='tmux ls'
+alias tns='tmux new-session -s'
 alias vi='vim -p'
 alias vim='vim -p'
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias mkdir='mkdir -p'
-alias ta='tmux attach'
-alias tls='tmux ls'
-alias tat='tmux attach -t'
-alias tns='tmux new-session -s'
 
 # Set to 'C' to make ls sort dotfiles
 export LC_COLLATE=C
