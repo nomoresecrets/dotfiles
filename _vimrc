@@ -52,7 +52,7 @@ let g:UltiSnipsSnippetsDir = "~/dotfiles/_vim/bundle/vim-snippets/UltiSnips"
 "set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set listchars=tab:→\ ,trail:⋅,extends:❯,precedes:❮
 set list
-set showbreak=↪
+"set showbreak=↪
 
 " Color settings
 "set t_Co=256                      " Enable 256 colors
