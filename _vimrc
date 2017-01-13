@@ -84,6 +84,7 @@ set showmatch                     " show matching brackets
 set matchpairs+=<:>,":"           " comma-separated list of characters that form pairs
 set wildmenu                      " menu completion on <TAB> in command mode
 set wildmode=list:longest,full    " cycle between all matches
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 set ruler                         " display cursor position
 set tabstop=2                     " <TAB> inserts two spaces
 set shiftwidth=2                  " indent level is 2 spaces wide
