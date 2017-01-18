@@ -48,6 +48,18 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetsDir = "~/dotfiles/_vim/bundle/vim-snippets/UltiSnips"
 
+
+" TagBar settings
+let g:tagbar_type_puppet = {
+\ 'ctagstype': 'puppet',
+\ 'kinds': [
+    \'c:class',
+    \'s:site',
+    \'n:node',
+    \'d:definition'
+  \]
+\}
+
 " displays tabs and trailing whitespaces with :set list
 "set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set listchars=tab:→\ ,trail:⋅,extends:❯,precedes:❮
@@ -114,7 +126,11 @@ endfunc
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
-" always open files in new tab
+" handle puppet :: delimiter correctly
+au FileType puppet setlocal isk+=:
+
+" automatic open puppet ctag in new tab
+au FileType puppet nnoremap <leader>T :tab split<CR>:exe "tag " . substitute(expand("<cword>"), "^::", "", "")<CR>
 
 " Get off my lawn
 nnoremap <Left> :echoe "please use h"<CR>
@@ -132,6 +148,7 @@ vmap <unique> D       <Plug>SchleppDup
 " set <leader> shortcuts
 " Remove trailing whitespace on <leader>S
 nnoremap <leader>S :%s/\s\+$//<CR>:let @/=''<CR>
+
 " shortcut to save
 nmap <leader>, :w<cr>
 nmap <leader>gs :Gstatus<cr>
@@ -152,6 +169,9 @@ inoremap <C-t>     <Esc>:tabnew<CR>
 
 " F3 to toggle numbers
 nnoremap <F3> :call NumberToggle()<CR>
+
+" F8 toggle TagBar
+nmap <F8> :TagbarToggle<CR>
 
 " F11 to toggle paste mode
 map <F11> :set invpaste<CR>

@@ -82,3 +82,6 @@
 [submodule "_vim/bundle/vim-ctrlp"]
 	path = _vim/bundle/vim-ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "_vim/bundle/vim-tagbar"]
+	path = _vim/bundle/vim-tagbar
+	url = https://github.com/majutsushi/tagbar.git
