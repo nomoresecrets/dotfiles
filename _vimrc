@@ -130,7 +130,7 @@ autocmd InsertLeave * :set relativenumber
 au FileType puppet setlocal isk+=:
 
 " automatic open puppet ctag in new tab
-au FileType puppet nnoremap <leader>T :tab split<CR>:exe "tag " . substitute(expand("<cword>"), "^::", "", "")<CR>
+au FileType puppet nnoremap <leader>t :tab split<CR>:exe "tag " . substitute(expand("<cword>"), "^::", "", "")<CR>
 
 " Get off my lawn
 nnoremap <Left> :echoe "please use h"<CR>
@@ -180,5 +180,4 @@ set pastetoggle=<F11>
 " some other keymapping
 map <leader>n :NERDTreeTabsToggle<CR>  " Open NERDTree
 map <leader>g :GundoToggle<CR>         " Open Gundo window
-map <leader>t <Plug>TaskList           " toggle tasklist
 
