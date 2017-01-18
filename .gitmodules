@@ -13,9 +13,6 @@
 [submodule "_vim/bundle/vim-gundo"]
 	path = _vim/bundle/vim-gundo
 	url = git://github.com/sjl/gundo.vim.git
-[submodule "_vim/bundle/vim-tasklist"]
-	path = _vim/bundle/vim-tasklist
-	url = git://github.com/vim-scripts/TaskList.vim.git
 [submodule "_vim/bundle/vim-nerdtree"]
 	path = _vim/bundle/vim-nerdtree
 	url = git://github.com/vim-scripts/The-NERD-tree.git
