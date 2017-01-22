@@ -55,11 +55,11 @@ alias tailf='tail -F'
 alias tat='tmux attach -t'
 alias tls='tmux ls'
 alias tns='tmux new-session -s'
-alias vi='vim -p'
 alias vim='vim -p'
+alias ws='cd ~/workspace'
 
 # Set to 'C' to make ls sort dotfiles
-export LC_COLLATE=C
+# export LC_COLLATE=C
 
 # Set to UTF-8 and english locale
 export LANG="en_US.UTF-8"
