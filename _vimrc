@@ -170,7 +170,7 @@ inoremap <C-t>     <Esc>:tabnew<CR>
 " F3 to toggle numbers
 nnoremap <F3> :call NumberToggle()<CR>
 
-" F4, F5, F6 fugitive shortcuts
+" F5, F6, F7 fugitive shortcuts
 nnoremap <F5> :Gstatus<CR>
 nnoremap <F6> :Gcommit<CR>
 nnoremap <F7> :Gpush<CR>
