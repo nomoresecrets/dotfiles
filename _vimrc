@@ -67,7 +67,8 @@ set list
 "set showbreak=↪
 
 " Color settings
-"set t_Co=256                      " Enable 256 colors
+" set t_Co=256                      " Enable 256 colors
+set t_ut=
 set background=dark               " dark background in use
 
 " some fix for putty
