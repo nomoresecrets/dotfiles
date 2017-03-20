@@ -38,7 +38,7 @@ let g:syntastic_check_on_wq = 0
 let g:airline_theme='simple'
 let g:airline_powerline_fonts = 1
 
-" NERDTree Settings
+" NERDTree settings
 let NERDTreeShowHidden=1
 
 " Trigger configuration. Do not use <tab> if you use
@@ -59,6 +59,14 @@ let g:tagbar_type_puppet = {
     \'d:definition'
   \]
 \}
+
+" CtrlP settings
+"
+" always open in new tab
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
 
 " displays tabs and trailing whitespaces with :set list
 "set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
@@ -185,5 +193,5 @@ set pastetoggle=<F11>
 
 " some other keymapping
 map <leader>n :NERDTreeTabsToggle<CR>  " Open NERDTree
-map <leader>g :GundoToggle<CR>         " Open Gundo window
+map <leader>u :GundoToggle<CR>         " Open Gundo window
 
