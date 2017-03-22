@@ -146,6 +146,8 @@ nnoremap <Left> :echoe "please use h"<CR>
 nnoremap <Right> :echoe "please use l"<CR>
 nnoremap <Up> :echoe "please use k"<CR>
 nnoremap <Down> :echoe "please use j"<CR>
+nnoremap j gj
+nnoremap k gk
 
 " key mapping in VisualBlock mode for moving blocks around
 vmap <unique> <up>    <Plug>SchleppUp
