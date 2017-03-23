@@ -42,7 +42,7 @@ let g:airline_powerline_fonts = 1
 let NERDTreeShowHidden=1
 
 " NERDTreeTabs settings
-let g:nerdtree_tabs_open_on_console_startup=1
+" let g:nerdtree_tabs_open_on_console_startup=1
 
 " Trigger configuration. Do not use <tab> if you use
 " https://github.com/Valloric/YouCompleteMe.
