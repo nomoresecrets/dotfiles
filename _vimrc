@@ -64,8 +64,8 @@ let g:tagbar_type_puppet = {
 "
 " always open in new tab
 let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<c-t>'],
-    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ 'AcceptSelection("e")': ['<C-T>'],
+    \ 'AcceptSelection("t")': ['<CR>', '<2-LeftMouse>'],
     \ }
 
 " displays tabs and trailing whitespaces with :set list
