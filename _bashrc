@@ -42,7 +42,10 @@ else
 fi
 
 # User specific aliases and functions
+alias ....='cd ../../..'
+alias ...='cd ../..'
 alias ..='cd ..'
+alias :q='logout'
 alias cp='cp -i'
 alias df='df -h'
 alias grep='grep --color=auto'
