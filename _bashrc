@@ -42,7 +42,6 @@ else
 fi
 
 # User specific aliases and functions
-alias -='cd -'
 alias ....='cd ../../..'
 alias ...='cd ../..'
 alias ..='cd ..'
