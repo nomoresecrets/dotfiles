@@ -98,6 +98,10 @@ set wrapscan                      " wrap around to the beginning of file on sear
 set ignorecase                    " case-insensitive search
 set smartcase                     " if a pattern contains an uppercase letter, it is case sensitive
 
+" Folding
+set foldmethod=indent
+set nofoldenable
+
 " Indentation
 set autoindent                    " always enable autoindenting
 set smartindent                   " use smart indent if there is no indent file
