@@ -142,8 +142,10 @@ endfunc
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
-" add filetype mapping for eyaml files
+" add filetype mapping
 au BufNewFile,BufRead *.eyaml set filetype=yaml
+au BufNewFile,BufReadPost *.md set filetype=markdown
+
 
 " handle puppet :: delimiter correctly
 au FileType puppet setlocal isk+=:
