@@ -1,0 +1,45 @@
+#!/bin/bash
+
+if [ -f /etc/lsb-release ]; then
+  OSVERSION=`lsb_release -d -s`
+elif [ -f /etc/redhat-release ]; then
+  OSVERSION=`cat /etc/redhat-release`
+else
+  OSVERSION="no CentOS/Ubuntu version string found"
+fi
+
+if [ -f /usr/lib/nagios/plugins/check_disk ]; then
+  FREESPACE=`/usr/lib/nagios/plugins/check_disk -w 80 -c 90 -u GB --all -X configfs -X cgroup -X tmpfs -X selinuxfs -X sysfs -X proc -X    mqueue -X binfmt_misc -X devtmpfs -l --ignore-ereg-path=/var/lib/docker --ignore-ereg-path=/var/named/chroot | awk '{ print $4$5" "$6" "$7$8$9"); " $11" "$12$13$14")" }'`
+elif [ -f /usr/lib64/nagios/plugins/check_disk ]; then
+  FREESPACE=`/usr/lib64/nagios/plugins/check_disk -w 80 -c 90 -u GB --all -X configfs -X cgroup -X tmpfs -X selinuxfs -X sysfs -X proc -X    mqueue -X binfmt_misc -X devtmpfs -l --ignore-ereg-path=/var/lib/docker --ignore-ereg-path=/var/named/chroot | awk '{ print $4$5" "$6" "$7$8$9"); " $11" "$12$13$14")" }'`
+else
+  FREESPACE="check_disk missing"
+fi
+
+PROCCOUNT=`ps -Afl | wc -l`
+PROCCOUNT=`expr $PROCCOUNT - 5`
+
+echo -e "
+\033[0;35m+++++++++++++++++: \033[0;37mSystem Data\033[0;35m :+++++++++++++++++++
+\033[0;35m+
+\033[0;35m+         \033[0;37mHostname \033[0;35m= \033[1;32m`hostname`
+\033[0;35m+       \033[0;37mIP-Address \033[0;35m= \033[1;32m`hostname -I |tr " " "\n"`
+\033[0;35m+               \033[0;37mOS \033[0;35m= \033[1;32m$OSVERSION
+\033[0;35m+           \033[0;37mKernel \033[0;35m= \033[1;32m`uname -r`
+\033[0;35m+           \033[0;37mUptime \033[0;35m= \033[1;32m`uptime | sed 's/.*up ([^,]*), .*/1/'`
+\033[0;35m+             \033[0;37mvCPU \033[0;35m= \033[1;32m`cat /proc/cpuinfo |grep "model name" |wc -l`x `cat /proc/cpuinfo |grep -i "model name" | tail -n 1 | awk '{ print $4" "$5" "$6" "$7" "$8" "$9     " "$10}'`
+\033[0;35m+             \033[0;37mvRAM \033[0;35m= \033[1;32m`cat /proc/meminfo | grep MemTotal | awk {'print $2/1024'}` MB
+\033[0;35m+             \033[0;37mvHDD \033[0;35m= \033[1;32m$FREESPACE
+\033[0;35m+      \033[0;37mSystem Time \033[0;35m= \033[1;32m`date`
+\033[0;35m+
+\033[0;35m+
+\033[0;35m+++++++++++++++++: \033[0;37mUser Data\033[0;35m :+++++++++++++++++++++
+\033[0;35m+
+\033[0;35m+         \033[0;37mUsername \033[0;35m= \033[1;32m`whoami`
+\033[0;35m+         \033[0;37mSessions \033[0;35m= \033[1;32m`who | grep $USER | wc -l`
+\033[0;35m+        \033[0;37mProcesses \033[0;35m= \033[1;32m$PROCCOUNT
+\033[0;35m+
+\033[0;35m+
+\033[0;35m+++++++++++++++++++++++++++++++++++++++++++++++++++
+"
+
