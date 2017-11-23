@@ -195,7 +195,7 @@ inoremap <C-t>     <Esc>:tabnew<CR>
 nnoremap <F3> :call NumberToggle()<CR>
 
 " F5, F6, F7 fugitive shortcuts
-nnoremap <F5> :Gstatus<CR>
+nnoremap <F5> :Gpull<CR>:Gstatus<CR>
 nnoremap <F6> :Gcommit<CR>
 nnoremap <F7> :Gpush<CR>
 
