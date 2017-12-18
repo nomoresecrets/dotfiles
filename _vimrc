@@ -52,6 +52,9 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetsDir = "~/dotfiles/_vim/bundle/vim-snippets/UltiSnips"
 
+" YouCompleteMe settings
+let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_key_list_previous_completion = ['<Up>']
 
 " TagBar settings
 let g:tagbar_type_puppet = {
