@@ -132,6 +132,7 @@ set report=0                      " always display changed line count
 set scrolloff=5                   " scroll 5 lines ahead
 set noerrorbells                  " don't bell
 set visualbell t_vb=
+set updatetime=100                " reduce updatetime
 
 " functions
 function! NumberToggle()
