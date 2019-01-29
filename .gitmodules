@@ -82,3 +82,6 @@
 [submodule "_vim/bundle/YouCompleteMe"]
 	path = _vim/bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "_vim/bundle/vim-fzf"]
+	path = _vim/bundle/vim-fzf
+	url = https://github.com/junegunn/fzf.vim.git

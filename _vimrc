@@ -24,16 +24,16 @@ filetype plugin indent on
 " enable syntax highlighting
 syntax on
 
-" recommended syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" " recommended syntastic settings
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_yaml_checkers = ['yamllint']
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_yaml_checkers = ['yamllint']
 
 " configure airline theme
 let g:airline_theme='simple'
@@ -67,13 +67,31 @@ let g:tagbar_type_puppet = {
   \]
 \}
 
-" CtrlP settings
-"
-" always open in new tab
-let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<C-T>'],
-    \ 'AcceptSelection("t")': ['<CR>', '<2-LeftMouse>'],
-    \ }
+"" CtrlP settings
+""
+"" always open in new tab
+"let g:ctrlp_prompt_mappings = {
+"    \ 'AcceptSelection("e")': ['<C-T>'],
+"    \ 'AcceptSelection("t")': ['<CR>', '<2-LeftMouse>'],
+"    \ }
+
+set rtp+=~/.fzf
+
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
 
 " displays tabs and trailing whitespaces with :set list
 "set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
@@ -209,6 +227,9 @@ nmap <F8> :TagbarToggle<CR>
 " F11 to toggle paste mode
 map <F11> :set invpaste<CR>
 set pastetoggle=<F11>
+
+" add FZF binding to Ctrl-p
+nnoremap <C-p> :FZF<CR>
 
 " some other keymapping
 map <leader>n :NERDTreeTabsToggle<CR>  " Open NERDTree
