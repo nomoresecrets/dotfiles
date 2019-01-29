@@ -19,9 +19,6 @@
 [submodule "_vim/bundle/vim-colors-solarized"]
 	path = _vim/bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
-[submodule "_vim/bundle/syntastic"]
-	path = _vim/bundle/syntastic
-	url = git://github.com/scrooloose/syntastic.git
 [submodule "_vim/bundle/vim-puppet"]
 	path = _vim/bundle/vim-puppet
 	url = https://github.com/rodjek/vim-puppet.git
@@ -76,9 +73,6 @@
 [submodule "_vim/bundle/vim-sort-motion"]
 	path = _vim/bundle/vim-sort-motion
 	url = https://github.com/christoomey/vim-sort-motion.git
-[submodule "_vim/bundle/vim-ctrlp"]
-	path = _vim/bundle/vim-ctrlp
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "_vim/bundle/vim-tagbar"]
 	path = _vim/bundle/vim-tagbar
 	url = https://github.com/majutsushi/tagbar.git
