@@ -85,3 +85,6 @@
 [submodule "_vim/bundle/vim-fzf"]
 	path = _vim/bundle/vim-fzf
 	url = https://github.com/junegunn/fzf.vim.git
+[submodule "_vim/bundle/vim-ale"]
+	path = _vim/bundle/vim-ale
+	url = https://github.com/w0rp/ale.git
